@@ -51,7 +51,7 @@ function Login() {
         Login
       </Button>
 
-      {/* Signup Redirect */}
+    
       <Text textAlign="center" fontSize="sm" color="gray.500">
         Don't have an account?{' '}
         <Link href="/signup" color="teal.500" fontWeight="bold">

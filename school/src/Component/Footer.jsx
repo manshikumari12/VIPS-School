@@ -7,15 +7,15 @@ function Footer() {
     const scrollToTop = () => {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth' // Smooth scrolling animation
+          behavior: 'smooth' 
         });
       };
   return (
       
     <>
-    {/* Footer Section */}
+  
     <Box bg="black" color="white" py={6}>
-      {/* Useful Links Section */}
+ 
       <VStack spacing={4} textAlign="center" mb={4}>
         <Text fontSize="lg" fontWeight="bold">
           Useful Links
@@ -40,7 +40,7 @@ function Footer() {
           
               color="white"
               _hover={{ color: "teal.300" }}
-              onClick={scrollToTop} // Scroll to top when clicked
+              onClick={scrollToTop} 
             >
               Guidelines
             </Link>
@@ -48,7 +48,7 @@ function Footer() {
         </HStack>
       </VStack>
 
-      {/* Copyright and Policies Section */}
+  
       <Stack spacing={4} textAlign="center">
         <Text>© 2024 VIPS . All rights reserved.</Text>
         <Text>Designed by Manshi Kumari </Text>
@@ -63,7 +63,7 @@ function Footer() {
         </HStack>
       </Stack>
     </Box>
-    {/* hskdjfkdkfs */}
+   
   </>
   )
 }

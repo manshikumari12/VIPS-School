@@ -19,11 +19,11 @@ function Imageslide() {
           setVisible(false);
           setTimeout(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-            setVisible(true); // Start blinking in
-          }, 600); // Time for blinking out
-        }, 5000); // Time for image change
+            setVisible(true); 
+          }, 600); 
+        }, 5000); 
     
-        return () => clearInterval(intervalId); // Cleanup on unmount
+        return () => clearInterval(intervalId);
       }, []);
     
       return (

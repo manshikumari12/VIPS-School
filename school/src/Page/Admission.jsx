@@ -10,9 +10,9 @@ function Admission() {
 <Nav/>
 
 <Box bg="#f7f7f7" py={10} px={6}>
-      {/* Add icon to the headline */}
+   
       <Heading textAlign="center" mb={6} color="teal.600" display="flex" justifyContent="center" alignItems="center">
-        <Icon as={InfoOutlineIcon} color="teal.600" mr={2} /> {/* Icon before the text */}
+        <Icon as={InfoOutlineIcon} color="teal.600" mr={2} />
         Admissions Process
       </Heading>
 
@@ -52,14 +52,12 @@ function Admission() {
         </Box>
       </VStack>
 
-      {/* Add button for Apply for Admission */}
+    
       <Box textAlign="center" mt={8}>
         <Button
           colorScheme="teal"
           size="lg"
-          onClick={() => {
-            window.location.href = '/apply'; // Redirect to the application form page
-          }}
+        
         >
           Apply for Admission
         </Button>
