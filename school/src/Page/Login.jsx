@@ -1,8 +1,11 @@
 import React from 'react'
 import { Flex, VStack, Heading, Text, Box, Image, FormControl, FormLabel, Input, Button, Link } from '@chakra-ui/react';
+import Nav from '../Component/Nav';
 function Login() {
   return (
-<Flex minH={"100vh"} justify="center" align="center" p={8}>
+    <>
+    <Nav/>
+    <Flex minH={"100vh"} justify="center" align="center" p={8}>
 
 <Flex
   direction={{ base: "column", md: "row" }} 
@@ -62,6 +65,8 @@ function Login() {
   </Box>
 </Flex>
 </Flex>
+    </>
+
 );
 }
 

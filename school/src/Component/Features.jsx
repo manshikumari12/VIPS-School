@@ -1,15 +1,22 @@
-import React from 'react'
-
-
-
-import {     List, ListItem,Box, Heading, Text, SimpleGrid, Stack, Icon, Button, Flex,VStack,Image} from '@chakra-ui/react';
-
+import React from 'react';
+import {
+  List,
+  ListItem,
+  Box,
+  Heading,
+  Text, 
+  Stack, 
+  Icon, 
+  Flex,
+  VStack,
+  Image} from '@chakra-ui/react';
+import image5 from "../Assets/image5.jpg";
 import { CheckCircleIcon } from '@chakra-ui/icons';
+
 function Features() {
     return (
         <>
-        
-      <Box bg="#f7f7f7" py={10} px={6}>
+        <Box bg="#f7f7f7" py={10} px={6}>
             <Heading textAlign="center" mb={10} color="teal.600">
               Vision & Mission
             </Heading>
@@ -23,7 +30,7 @@ function Features() {
               {/* Left Side: Image */}
               <Box flex="1" mb={{ base: 6, md: 0 }} textAlign="center">
                 <Image 
-                  // src={missionImage} 
+                  src={image5} 
                   alt="VIPS Vision and Mission" 
                   borderRadius="lg" 
                   maxW="100%" 
@@ -41,24 +48,15 @@ function Features() {
               </Box>
             </Flex>
           </Box>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-          <Box bg="#f7f7f7" py={10} px={6}>
+           <Box bg="#f7f7f7" py={10} px={6}>
             <Heading textAlign="center" mb={10} color="teal.600">
               Why VIPS?
             </Heading>
             <Flex
-              direction={{ base: 'column', md: 'row' }} // Responsive layout
+              direction={{ base: 'column', md: 'row' }} 
               justify="space-between"
               mx="auto"
-              maxW="1200px" // Center the content
+              maxW="1200px" 
             >
               {/* Section 1: Admissions */}
               <Box flex="1" m={4} p={5} borderRadius="md" bg="white" boxShadow="md">
@@ -86,40 +84,7 @@ function Features() {
             </Flex>
           </Box>
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-          
-      
-      
-      
-      
-      
-      <Box bg="#f7f7f7" py={10} px={6}>
+       <Box bg="#f7f7f7" py={10} px={6}>
             <Heading textAlign="center" mb={10} color="teal.600">
               Academics
             </Heading>
@@ -188,7 +153,7 @@ function Features() {
       
       
       
-      
+{/*       
           <Box bg="#f7f7f7" py={10} px={6}>
             <Heading textAlign="center" mb={6} color="teal.600">
               Admissions Process
@@ -227,7 +192,7 @@ function Features() {
                 </List>
               </Box>
             </VStack>
-          </Box>
+          </Box> */}
       
           
           </>

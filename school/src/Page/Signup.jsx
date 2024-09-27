@@ -1,8 +1,10 @@
 import React from 'react'
 import { Flex,VStack,Heading,Text,Box,Image , FormControl,FormLabel,Input,Button,Link} from '@chakra-ui/react'
+import Nav from '../Component/Nav'
 function Signup() {
   return (
    <>
+   <Nav/>
      <Flex minH={"100vh"} justify="center" align="center" p={8}>
        
        <Flex
