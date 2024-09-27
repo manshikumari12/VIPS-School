@@ -1,56 +1,4 @@
 
-
-
-
-// import React, { useEffect, useState } from 'react';
-// import { Box, Image } from '@chakra-ui/react';
-// import image7 from "../Assets/image7.jpg";
-// import image2 from "../Assets/image2.jpg"
-// import image3 from "../Assets/image3.jpg"
-// import image4 from "../Assets/image4.jpg"
-// import image5 from "../Assets/image5.jpg"
-// function Imageslide() {
-//   const images = [
-//     image7, 
-//     image3,
-//     image2,
-//     image4,
-//     image5
-    
-//   ];
-
-//   const [currentIndex, setCurrentIndex] = useState(0);
-//   const [visible, setVisible] = useState(true);
-
-//   useEffect(() => {
-//     const intervalId = setInterval(() => {
-//       setVisible(false);
-//       setTimeout(() => {
-//         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); 
-//         setVisible(true); 
-//       }, 600); 
-//     }, 5000); 
-
-//     return () => clearInterval(intervalId); 
-//   }, [images.length]);
-//   return (
-//     <Box position="relative" width="100%" height="400px" overflow="hidden">
-//       <Image
-//         src={images[currentIndex]} 
-//         alt={`Slideshow Image ${currentIndex + 1}`}
-//         boxSize="100%"
-//         objectFit="cover"
-//         opacity={visible ? 1 : 0}
-//         transition="opacity 0.2s" 
-//       />
-//     </Box>
-//   );
-// }
-
-// export default Imageslide;
-
-
-
 import React, { useEffect, useState } from 'react';
 import { Box, Image, Text, Button, Link } from '@chakra-ui/react';
 import image7 from "../Assets/image7.jpg"; 
@@ -94,7 +42,7 @@ function Imageslide() {
       headline: "Join VIPS Today",
       subText: "Enroll now and give your child the best education possible.",
       buttonText: "Enroll Now",
-      buttonLink: "/signup",
+      buttonLink: "/contactus",
     }
   ];
 
@@ -115,7 +63,7 @@ function Imageslide() {
 
   return (
     <Box position="relative" width="100%" height="400px" overflow="hidden">
-      {/* Image */}
+    
       <Image
         src={images[currentIndex].src} 
         alt={`Slideshow Image ${currentIndex + 1}`}
@@ -129,7 +77,7 @@ function Imageslide() {
         zIndex={1}
       />
 
-      {/* Text Overlay */}
+     
       <Box
         position="absolute"
         top={0}
@@ -143,7 +91,7 @@ function Imageslide() {
         bg="rgba(0, 0, 0, 0.6)" 
         color="white"
         textAlign="center"
-        zIndex={2}
+        zIndex={1}
       >
         <Text fontSize="3xl" fontWeight="bold" mb={4}>
           {images[currentIndex].headline}

@@ -6,6 +6,8 @@ import Home from '../Page/Home';
 import Login from '../Page/Login';
 import AboutUs from '../Page/AboutUs';
 import Admission from '../Page/Admission';
+import Gallary from '../Page/Gallary';
+import ContactUs from '../Page/ContactUs';
 
 
 function AllRouter() {
@@ -14,14 +16,12 @@ function AllRouter() {
       <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/AboutUS' element={<AboutUs/>}/>
+      {/* <Route path='/login' element={<Login/>}/>
+      <Route path='/signup' element={<Signup/>}/> */}
+      <Route path='/admission' element={<Admission/>}/>
+      <Route path='/Gallary' element={<Gallary/>}/>
+      <Route path='/contactus' element={<ContactUs/>}/>
 
-      <Route path='/login' element={<Login/>}/>
-           
-            <Route path='/signup' element={<Signup/>}/>
-            <Route path='/admission' element={<Admission/>}/>
-
-          
-            {/* <Route path='/profile' element={<Notepage/>}/> */}
 
 
         </Routes>
