@@ -167,8 +167,8 @@ function Nav() {
               </Button>
 
               <Button width="full" onClick={toggleDrawer}>
-                <Link href='/signup' style={{ textDecoration: 'none', color: 'inherit' }}>
-                  Signup/Login
+                <Link href='/contactus' style={{ textDecoration: 'none', color: 'inherit' }}>
+                Contact Us
                 </Link>
               </Button>
 
