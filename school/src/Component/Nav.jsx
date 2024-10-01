@@ -79,28 +79,20 @@ function Nav() {
                     zIndex={3} 
                     mt={1} 
                   >
+                   
                     <MenuItem>
-                      <Link href='/syllabus' style={{ textDecoration: 'none', color: 'inherit' }}>
-                        Syllabus
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link href='/school-timing' style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <Link href='/schooltiming' style={{ textDecoration: 'none', color: 'inherit' }}>
                         School Timing
                       </Link>
                     </MenuItem>
                     <MenuItem>
-                      <Link href='/school-uniform' style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <Link href='/schooluniform' style={{ textDecoration: 'none', color: 'inherit' }}>
                         School Uniform
                       </Link>
                     </MenuItem>
+                 
                     <MenuItem>
-                      <Link href='/holiday-list' style={{ textDecoration: 'none', color: 'inherit' }}>
-                        Holiday List
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link href='/school-guidelines' style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <Link href='/schoolguidelines' style={{ textDecoration: 'none', color: 'inherit' }}>
                         School Guidelines
                       </Link>
                     </MenuItem>
