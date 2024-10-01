@@ -1,17 +1,16 @@
 import React from 'react';
 import {
-  List,
-  ListItem,
+
   Box,
   Heading,
   Text, 
   Stack, 
-  Icon, 
+
   Flex,
-  VStack,
+
   Image} from '@chakra-ui/react';
 import image5 from "../Assets/image5.jpg";
-import { CheckCircleIcon } from '@chakra-ui/icons';
+
 import HoverImagelist from './HoverImagelist';
 
 function Features() {

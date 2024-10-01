@@ -8,7 +8,7 @@ function AboutUs() {
     <>
     <Nav/>
         <Flex p={5} bg="white" borderRadius="md" boxShadow="md" direction={['column', 'row']} align="center">
-      {/* Left side: Text content */}
+   
       <Box flex="1" pr={[0, 5]} mb={[4, 0]}>
         <Heading as="h1" size="2xl" color="teal.600" mb={4} paddingBottom={5}>
           About VIPS

@@ -1,15 +1,12 @@
 import React from 'react'
 import {
-    ChakraProvider,
+  
     Box,
     Flex,
     Heading,
     Text,
-    Stack,
-    Button,
     Divider,
-    Image,
-    VStack,
+ 
   } from '@chakra-ui/react';
 import Imageslide from './Imageslide';
 function Overview() {

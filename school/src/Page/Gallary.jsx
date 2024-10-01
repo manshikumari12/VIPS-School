@@ -36,7 +36,7 @@ function Gallery() {
               width="100%" 
               height="250px" 
               transition="transform 0.3s ease"
-              _hover={{ transform: "scale(1.05)" }} // Hover effect for a nice zoom effect
+              _hover={{ transform: "scale(1.05)" }} 
             />
           </Box>
         ))}

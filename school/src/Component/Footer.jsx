@@ -29,7 +29,9 @@ function Footer() {
           </Link>
 
           <Link
-             
+  
+                   
+             href=' /schooltiming'
               color="white"
               _hover={{ color: "teal.300" }}
               onClick={scrollToTop} 
@@ -37,7 +39,8 @@ function Footer() {
               Holiday List
             </Link>
             <Link
-          
+   
+          href='/schoolguidelines'
               color="white"
               _hover={{ color: "teal.300" }}
               onClick={scrollToTop} 
@@ -51,7 +54,7 @@ function Footer() {
   
       <Stack spacing={4} textAlign="center">
         <Text>© 2024 VIPS . All rights reserved.</Text>
-        <Text>Designed by Manshi Kumari </Text>
+       
 
         <HStack justify="center" spacing={6}>
           <Button variant="link" colorScheme="whiteAlpha"  onClick={scrollToTop}  >

@@ -1,146 +1,4 @@
 
-// import React, { useState } from 'react';
-// import {
-//   FormControl,
-//   FormLabel,
-//   Input,
-//   Textarea,
-//   Button,
-//   Select,
-//   Box,
-//   Heading,
-// } from '@chakra-ui/react';
-
-// function GetInTouchForm() {
-//   const [formData, setFormData] = useState({
-//     fullName: '',
-//     email: '',
-//     phone: '',
-//     address: '',
-//     city: '',
-//     state: '',
-//     message: '',
-//   });
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData((prevData) => ({ ...prevData, [name]: value }));
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     console.log(formData);
-//     // You can handle the submission logic here, like sending it to an API or email.
-//     // Reset form if necessary
-//     setFormData({
-//       fullName: '',
-//       email: '',
-//       phone: '',
-//       address: '',
-//       city: '',
-//       state: '',
-//       message: '',
-//     });
-//   };
-
-//   return (
-//     <Box bg="white" p={6} borderRadius="md" boxShadow="md "
-//     width={"50%"}>
-//       <Heading size="lg" color="teal.600" mb={4}>Get in Touch</Heading>
-
-//       <form onSubmit={handleSubmit}>
-//         <FormControl mb={4} isRequired>
-//           <FormLabel>Full Name</FormLabel>
-//           <Input 
-//             type="text" 
-//             name="fullName" 
-//             placeholder="Your name" 
-//             value={formData.fullName}
-//             onChange={handleChange} 
-//           />
-//         </FormControl>
-
-//         <FormControl mb={4} isRequired>
-//           <FormLabel>Email Address</FormLabel>
-//           <Input 
-//             type="email" 
-//             name="email" 
-//             placeholder="Your email" 
-//             value={formData.email}
-//             onChange={handleChange} 
-//           />
-//         </FormControl>
-
-//         <FormControl mb={4} isRequired>
-//           <FormLabel>Phone Number</FormLabel>
-//           <Input 
-//             type="tel" 
-//             name="phone" 
-//             placeholder="Your phone number" 
-//             value={formData.phone}
-//             onChange={handleChange} 
-//           />
-//         </FormControl>
-
-//         <FormControl mb={4} isRequired>
-//           <FormLabel>Address</FormLabel>
-//           <Input 
-//             type="text" 
-//             name="address" 
-//             placeholder="Your address" 
-//             value={formData.address}
-//             onChange={handleChange} 
-//           />
-//         </FormControl>
-
-//         <FormControl mb={4} isRequired>
-//           <FormLabel>City</FormLabel>
-//           <Input 
-//             type="text" 
-//             name="city" 
-//             placeholder="e.g. Ramgarh" 
-//             value={formData.city}
-//             onChange={handleChange} 
-//           />
-//         </FormControl>
-
-//         <FormControl mb={4} isRequired>
-//           <FormLabel>State</FormLabel>
-//           <Select 
-//             name="state" 
-//             placeholder="Please select" 
-//             value={formData.state}
-//             onChange={handleChange}
-//           >
-//             <option value="Jharkhand">Jharkhand</option>
-//             <option value="Bihar">Bihar</option>
-//             <option value="West Bengal">West Bengal</option>
-//             {/* Add more states as needed */}
-//           </Select>
-//         </FormControl>
-
-//         <FormControl mb={4} isRequired>
-//           <FormLabel>Message</FormLabel>
-//           <Textarea 
-//             name="message" 
-//             placeholder="Your message" 
-//             rows={6} 
-//             value={formData.message}
-//             onChange={handleChange} 
-//           />
-//         </FormControl>
-
-//         <Button colorScheme="teal" width="full" type="submit">
-//           Send Message
-//         </Button>
-//       </form>
-//     </Box>
-//   );
-// }
-
-// export default GetInTouchForm;
-
-
 
 
 import React, { useState } from 'react';
@@ -167,8 +25,8 @@ function GetInTouchForm() {
     message: '',
   });
 
-  const [isLoading, setIsLoading] = useState(false); // To manage loading state
-  const toast = useToast(); // Chakra UI toast for notifications
+  const [isLoading, setIsLoading] = useState(false); 
+  const toast = useToast();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -178,7 +36,7 @@ function GetInTouchForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    setIsLoading(true); // Set loading to true when form is submitted
+    setIsLoading(true); 
 
     try {
       const response = await fetch('http://localhost:1111/api/contact', {
@@ -199,7 +57,7 @@ function GetInTouchForm() {
           duration: 5000,
           isClosable: true,
         });
-        // Reset the form after successful submission
+     
         setFormData({
           fullName: '',
           email: '',
@@ -223,13 +81,21 @@ function GetInTouchForm() {
         isClosable: true,
       });
     } finally {
-      setIsLoading(false); // Stop loading after submission is done
+      setIsLoading(false); 
     }
   };
 
   return (
-    <Box bg="white" p={6} borderRadius="md" boxShadow="md" width={"50%"}>
-      <Heading size="lg" color="teal.600" mb={4}>Get in Touch</Heading>
+    <Box
+      bg="white"
+      p={[4, 6, 8]} 
+      borderRadius="md"
+      boxShadow="md"
+      width={['90%', '80%', '60%', '50%']} 
+      mx="auto" 
+      mt={8} 
+    >
+      <Heading size="lg" color="teal.600" mb={4} textAlign="center">Get in Touch</Heading>
 
       <form onSubmit={handleSubmit}>
         <FormControl mb={4} isRequired>
@@ -317,7 +183,7 @@ function GetInTouchForm() {
           colorScheme="teal"
           width="full"
           type="submit"
-          isLoading={isLoading} // Show loading state while submitting
+          isLoading={isLoading} 
         >
           Send Message
         </Button>
@@ -327,3 +193,4 @@ function GetInTouchForm() {
 }
 
 export default GetInTouchForm;
+

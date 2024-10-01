@@ -3,7 +3,6 @@ import {
   Box,
   Image,
   Grid,
-  Text,
   useDisclosure,
   Modal,
   ModalOverlay,
@@ -13,7 +12,7 @@ import {
   ModalCloseButton,
 } from '@chakra-ui/react';
 
-// Import your image assets
+
 import image7 from "../Assets/image7.jpg"; 
 import image2 from "../Assets/image2.jpg";
 import image3 from "../Assets/image3.jpg";
@@ -100,7 +99,7 @@ function HoverImagelist() {
         ))}
       </Grid>
 
-      {/* Modal for displaying the full image */}
+   
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
