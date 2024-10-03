@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Box, VStack, Text } from '@chakra-ui/react';
+import { Box, Text, Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
 
 const TeacherDashboard = () => {
   const [teachersData, setTeachersData] = useState([]);
-  const [userDetails, setUserDetails] = useState(null); 
-  const [isTeacher, setIsTeacher] = useState(false); 
+  const [userDetails, setUserDetails] = useState(null);
+  const [isTeacher, setIsTeacher] = useState(false);
 
-
+  // Function to fetch user details
   const fetchUserDetails = async () => {
     const token = sessionStorage.getItem('token');
 
@@ -14,7 +14,7 @@ const TeacherDashboard = () => {
       const response = await fetch('http://localhost:1111/user/details', {
         method: 'GET',
         headers: {
-          'Authorization': token, 
+          'Authorization': token,
           'Content-Type': 'application/json',
         },
       });
@@ -24,22 +24,24 @@ const TeacherDashboard = () => {
       }
 
       const data = await response.json();
+      console.log('User Details:', data); 
       setUserDetails(data);
-      setIsTeacher(data.role === 'teacher'); 
+      setIsTeacher(data.role === 'teacher');
+
     } catch (error) {
       console.error('Error fetching user details:', error);
     }
   };
 
-
+  // Function to fetch teachers data
   const fetchTeachersData = async () => {
-    const token = sessionStorage.getItem('token'); 
+    const token = sessionStorage.getItem('token');
 
     try {
       const response = await fetch('http://localhost:1111/teacher/all', {
         method: 'GET',
         headers: {
-          'Authorization': token, 
+          'Authorization': token,
           'Content-Type': 'application/json',
         },
       });
@@ -49,12 +51,12 @@ const TeacherDashboard = () => {
       }
 
       const data = await response.json();
+      console.log('Fetched Teacher Data:', data);
       setTeachersData(data);
     } catch (error) {
       console.error('Error fetching teachers:', error);
     }
   };
-
 
   useEffect(() => {
     fetchUserDetails();
@@ -62,37 +64,51 @@ const TeacherDashboard = () => {
 
   useEffect(() => {
     if (isTeacher) {
-      fetchTeachersData(); 
+      fetchTeachersData();
     }
   }, [isTeacher]);
 
   return (
-    <Box>
-      {userDetails && (
-        <Box mb={4}>
-          <Text fontSize="xl" fontWeight="bold">User Details:</Text>
-          <Text>Name: {userDetails.name}</Text>
-          <Text>Email: {userDetails.email}</Text>
-          <Text>Role: {userDetails.role}</Text>
-        </Box>
-      )}
+    <Box p={4}>
+      {userDetails ? (
+        <>
+          {isTeacher ? (
+            <Box>
+              <Text fontSize="2xl" mb={4}>Your Details and List of Teachers:</Text>
+              <Table variant="simple">
+                <Thead>
+                  <Tr>
+                    <Th>Teacher Name</Th>
+                    <Th>Your Email</Th>
+                    <Th>Your Role</Th>
+                    <Th>Subjects</Th>
+                  </Tr>
+                </Thead>
+                <Tbody>
+                
+                  <Tr>
+                    <Td>{userDetails.name}</Td>
+                    <Td>{userDetails.email}</Td>
+                    <Td>{userDetails.role}</Td>
+                    {teachersData.map((teacher) => (
+                    <Tr key={teacher.id}>
+                     
+                      <Td>{teacher.subjects ? teacher.subjects.join(', ') : 'N/A'}</Td>
+                    </Tr>
+                  ))}
+                  </Tr>
 
-      {isTeacher && (
-        <Box>
-          <Text fontSize="2xl" mb={4}>List of Teachers:</Text>
-          <VStack spacing={2}>
-            {teachersData.map((teacher) => (
-              <Box key={teacher.id} p={4} borderWidth="1px" borderRadius="md">
-                <Text fontWeight="bold">{teacher.name}</Text>
-                <Text>Subjects: {teacher.subjects.join(', ')}</Text>
-              </Box>
-            ))}
-          </VStack>
-        </Box>
-      )}
-
-      {!isTeacher && userDetails && (
-        <Text>You do not have access to the teacher dashboard.</Text>
+                  {/* Render each teacher's details in a new row */}
+                 
+                </Tbody>
+              </Table>
+            </Box>
+          ) : (
+            <Text>You do not have access to the teacher dashboard.</Text>
+          )}
+        </>
+      ) : (
+        <Text>Loading user details...</Text> // Loading state
       )}
     </Box>
   );
