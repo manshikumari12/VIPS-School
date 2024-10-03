@@ -14,11 +14,12 @@ import Guidelines from '../Page/Guidelines';
 import Signup from '../Page/Signup';
 import Login from '../Page/Login';
 import SchoolDashboard from '../Page/SchoolDashboard';
-import AdminDashboard from '../Page/AdminDashboard';
+// import AdminDashboard from '../Page/AdminDashboard';
 // import TeacherDashboard from '../Page/TeacherDashboard';
 
 // import ParentDashboard from '../Page/ParentDashboard';
 import MyClass from '../Page/MyClass';
+import TeacherDashboard from '../Page/TeacherDashboard';
 
 
 function AllRouter() {
@@ -28,8 +29,9 @@ function AllRouter() {
       <Route path='/' element={<Home/>}/>
       <Route path='/AboutUS' element={<AboutUs/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      
       <Route path='/schooldashbord' element={<SchoolDashboard/>}/>
-      <Route path='/admin' element={<AdminDashboard/>}/>
+      <Route path='/teacher' element={<TeacherDashboard/>}/>
       {/* <Route path='/teacher' element={<TeacherDashboard/>}/> */}
       <Route path='/myclass' element={<MyClass/>}/>
       {/* <Route path='/parent' element={<ParentDashboard/>}/> */}
