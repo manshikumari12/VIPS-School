@@ -15,9 +15,10 @@ import Signup from '../Page/Signup';
 import Login from '../Page/Login';
 import SchoolDashboard from '../Page/SchoolDashboard';
 import AdminDashboard from '../Page/AdminDashboard';
-import TeacherDashboard from '../Page/TeacherDashboard';
-import StudentDashboard from '../Page/StudentDashbord';
-import ParentDashboard from '../Page/ParentDashboard';
+// import TeacherDashboard from '../Page/TeacherDashboard';
+
+// import ParentDashboard from '../Page/ParentDashboard';
+import MyClass from '../Page/MyClass';
 
 
 function AllRouter() {
@@ -29,9 +30,9 @@ function AllRouter() {
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/schooldashbord' element={<SchoolDashboard/>}/>
       <Route path='/admin' element={<AdminDashboard/>}/>
-      <Route path='/teacher' element={<TeacherDashboard/>}/>
-      <Route path='/student' element={<StudentDashboard/>}/>
-      <Route path='/parent' element={<ParentDashboard/>}/>
+      {/* <Route path='/teacher' element={<TeacherDashboard/>}/> */}
+      <Route path='/myclass' element={<MyClass/>}/>
+      {/* <Route path='/parent' element={<ParentDashboard/>}/> */}
 
 
       <Route path='/login' element={<Login/>}/>
