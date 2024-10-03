@@ -99,17 +99,39 @@ function Nav() {
                   </MenuList>
                 </Menu>
 
-                {/* <Button>
+                <Button>
                   <Link href='/signup' style={{ textDecoration: 'none', color: 'inherit' }}>
                     Signup/Login
                   </Link>
-                </Button> */}
+                </Button>
 
                 <Button>
                   <Link href='/Gallary' style={{ textDecoration: 'none', color: 'inherit' }}>
                     Gallery
                   </Link>
                 </Button>
+                {/* dashbord of Student teacher and parents */}
+
+                <Menu>
+                  <MenuButton as={Button} colorScheme='teal'>
+                 Dashobord
+                  </MenuButton>
+                  <MenuList
+                    position="absolute" 
+                    zIndex={3} 
+                    mt={1} 
+                  >
+                   
+                    <MenuItem>
+                      <Link href='/schooldashbord' style={{ textDecoration: 'none', color: 'inherit' }}>
+                      Dashobord
+                      </Link>
+                    </MenuItem>
+                 
+                 
+                 
+                  </MenuList>
+                </Menu>
 
                 <Button>
                   <Link href='/contactus' style={{ textDecoration: 'none', color: 'inherit' }}>
