@@ -8,8 +8,8 @@ require('dotenv').config();
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.PASSWORD_USER,
+      user: "guptamanshi606@gmail.com",
+      pass: "pecdubvwywqpctqk",
     },
     
   });
@@ -45,14 +45,14 @@ ContactRouter.post('/contact', async (req, res) => {
 
    
     await sendEmail(
-      'earnmore981@gmail.com',
+      'manshisbp@gmail.com',
       'New Contact Form Submission',
       `You have a new message from ${fullName}:\n\n${message}\n\nContact: ${phone}, ${email}`
     );
 
     res.status(201).json({ message: 'Contact form submitted successfully!' });
   } catch (error) {
-    console.error(error); // Log the error for debugging
+    console.error(error); 
     res.status(500).json({ message: 'Failed to submit contact form.', error: error.message });
   }
 });

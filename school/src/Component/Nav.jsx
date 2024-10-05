@@ -123,7 +123,7 @@ function Nav() {
                   >
                    
                     <MenuItem>
-                      <Link href='/schooldashbord' style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <Link href='/dashbord' style={{ textDecoration: 'none', color: 'inherit' }}>
                       Dashobord
                       </Link>
                     </MenuItem>

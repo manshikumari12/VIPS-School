@@ -20,6 +20,8 @@ import SchoolDashboard from '../Page/SchoolDashboard';
 // import ParentDashboard from '../Page/ParentDashboard';
 import MyClass from '../Page/MyClass';
 import TeacherDashboard from '../Page/TeacherDashboard';
+import StudentDashboard from '../Page/StudentDashboard';
+import Dashboard from '../Page/Dashbord';
 
 
 function AllRouter() {
@@ -34,6 +36,10 @@ function AllRouter() {
       <Route path='/teacher' element={<TeacherDashboard/>}/>
       {/* <Route path='/teacher' element={<TeacherDashboard/>}/> */}
       <Route path='/myclass' element={<MyClass/>}/>
+      <Route path='/student' element={<StudentDashboard/>}/>
+      <Route path='/dashbord' element={<Dashboard/>}/>
+
+
       {/* <Route path='/parent' element={<ParentDashboard/>}/> */}
 
 

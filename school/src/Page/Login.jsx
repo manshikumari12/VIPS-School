@@ -62,7 +62,7 @@ function Login() {
         });
 
      
-        navigate('/schooldashbord'); 
+        navigate('/dashbord'); 
         
       } else {
         throw new Error(data.msg); 
